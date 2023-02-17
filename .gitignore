@@ -1,0 +1,24 @@
+.vscode
+data
+external_models
+pretrained_models
+checkpoints
+**/__pycache__
+tools/_jupyter/.ipynb_checkpoints
+
+# Figures
+external_src/ALAE/dataset_samples/
+external_src/ALAE/style_mixing/output/
+external_src/ALAE/style_mixing/test_images/
+external_src/Soft-Truncation/figure/
+external_src/StyleSwin/imgs/
+
+# Models
+**/*.pt
+**/*.pkl
+**/*.pth
+**/*.pth.tar
+
+# Data
+**/*.npy
+**/*.npz

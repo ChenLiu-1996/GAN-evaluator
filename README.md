@@ -1,0 +1,85 @@
+# GAN Evaluator for Inception Score (IS) and Frechet Inception Distance (FID)
+Chen Liu (chen.liu.cl2482@yale.edu)
+Alex Wong (alex.wong@yale.edu)
+
+## Main Contributions
+1. We created a GAN evaluator for IS and FID that is easy to use and flexible.
+2. We provided a simple script to demonstrate one common use case.
+
+Quick introduction to the Evaluator
+(More details can be found in `utils/eval_utils.py/GAN_Evaluator`.)
+
+```
+This evaluator computes the following metrics:
+    - Inception Score (IS)
+    - Frechet Inception Distance (FID)
+
+This evaluator will take in the real images and the fake/generated images.
+Then it will compute the activations from the real and fake images as well as the
+predictions from the fake images.
+The (fake) predictions will be used to compute IS, while
+the (real, fake) activations will be used to compute FID.
+If input image resolution < 75 x 75, we will upsample the image to accommodate Inception v3.
+
+The real and fake images can be provided to this evaluator in either of the following formats:
+1. dataloader
+    `load_all_real_imgs`
+    `load_all_fake_imgs`
+2. per-batch
+    `fill_real_img_batch`
+    `fill_fake_img_batch`
+
+- COMMON USE CASES
+1. For the purpose of on-the-fly evaluation during GAN training:
+    We recommend pre-loading the real images using the dataloader format, and
+    populate the fake images using the per-batch format as training goes on.
+    At the end of each epoch, you can clean the fake images using the method:
+        `clear_fake_imgs`
+    Since it is uncommon that we want to clear the real images, we decided
+    to intentionally not implement that method.
+
+2. For the purpose of offline evaluation of a saved dataset:
+    We recommend pre-loading the real images and fake images.
+```
+
+### The repository is structured in the following manner.
+```
+GAN-IS-FID-evaluator
+    ├── config
+    |   └── `dcgan_svhn.yaml`
+    ├── data (*)
+    ├── debug_plot (*)
+    ├── logs (*)
+    └── src
+        ├── utils
+        |   ├── `eval_utils.py`: THIS CONTAINS OUR `GAN_Evaluator`.
+        |   └── other utility files.
+        └── `train_dcgan_svhn.py`: our example use case.
+```
+Folders marked with (*) will be created automatically when you run `train_dcgan_svhn.py`.
+
+### Usage
+To run our example use case, do the following after activating the proper environment.
+```
+git clone
+cd src
+python train_dcgan_svhn.py --config ../config/dcgan_svhn.yaml
+```
+
+### Environement Setup
+
+#### On our Yale Vision Lab server
+- There is a virtualenv ready to use, located at
+`/media/home/chliu/.virtualenv/mondi-image-gen/`.
+
+- Alternatively, you can start from an existing environment "torch191-py38env",
+and install the following packages:
+```
+python3 -m pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
+python3 -m pip install wget gdown numpy matplotlib pyyaml click scipy yacs scikit-learn
+```
+
+If you see error messages such as `Failed to build CUDA kernels for bias_act.`, you can fix it with:
+```
+python3 -m pip install ninja
+```
