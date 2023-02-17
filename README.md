@@ -1,5 +1,7 @@
 # GAN Evaluator for Inception Score (IS) and Frechet Inception Distance (FID)
+
 Chen Liu (chen.liu.cl2482@yale.edu)
+
 Alex Wong (alex.wong@yale.edu)
 
 ## Main Contributions
@@ -68,7 +70,9 @@ python train_dcgan_svhn.py --config ../config/dcgan_svhn.yaml
 
 ### Environement Setup
 
-#### On our Yale Vision Lab server
+<details>
+  <summary><br>On our Yale Vision Lab server</br></summary>
+
 - There is a virtualenv ready to use, located at
 `/media/home/chliu/.virtualenv/mondi-image-gen/`.
 
@@ -83,3 +87,5 @@ If you see error messages such as `Failed to build CUDA kernels for bias_act.`, 
 ```
 python3 -m pip install ninja
 ```
+
+</details>
