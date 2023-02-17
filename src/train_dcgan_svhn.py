@@ -192,9 +192,6 @@ def train(config: AttributeHashmap):
             y_pred_fake_sum += torch.sum(y_pred_fake)
             loss_D_sum += loss_D.item() * B
 
-            import pdb
-            pdb.set_trace()
-
             # Update generator.
             loss_G_sum = 0
             x_fake = generator.forward(z)
