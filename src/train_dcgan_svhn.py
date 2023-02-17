@@ -85,7 +85,7 @@ def normalize(
     range2 = image.max() - image.min()
 
     slope = range1 / range2
-    offset = dynamic_range[1] - slope
+    offset = dynamic_range[0] - slope * image.min()
 
     return image * slope + offset
 
