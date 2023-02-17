@@ -81,9 +81,13 @@ def normalize(
         image: Union[np.array, torch.Tensor],
         dynamic_range: List[float] = [0, 1]) -> Union[np.array, torch.Tensor]:
     assert len(dynamic_range) == 2
-    scale = dynamic_range[1] - dynamic_range[0]
-    center = scale / 2
-    return scale * (image - image.min()) / (image.max() - image.min()) - center
+    range1 = dynamic_range[1] - dynamic_range[0]
+    range2 = image.max() - image.min()
+
+    slope = range1 / range2
+    offset = dynamic_range[1] - slope
+
+    return image * slope + offset
 
 
 def train(config: AttributeHashmap):
