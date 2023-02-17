@@ -71,7 +71,7 @@ python train_dcgan_svhn.py --config ../config/dcgan_svhn.yaml
 ### Environement Setup
 
 <details>
-  <summary><br>On our Yale Vision Lab server</br></summary>
+  <summary><b>On our Yale Vision Lab server</b></summary>
 
 - There is a virtualenv ready to use, located at
 `/media/home/chliu/.virtualenv/mondi-image-gen/`.
