@@ -81,13 +81,18 @@ def normalize(
         image: Union[np.array, torch.Tensor],
         dynamic_range: List[float] = [0, 1]) -> Union[np.array, torch.Tensor]:
     assert len(dynamic_range) == 2
-    range1 = dynamic_range[1] - dynamic_range[0]
-    range2 = image.max() - image.min()
 
-    slope = range1 / range2
-    offset = dynamic_range[0] - slope * image.min()
+    x1, x2 = image.min(), image.max()
+    y1, y2 = dynamic_range[0], dynamic_range[1]
 
-    return image * slope + offset
+    slope = (y2 - y1) / (x2 - x1)
+    offset = (y1 * x2 - y2 * x1) / (x2 - x1)
+
+    image = image * slope + offset
+
+    # Fix precision issue.
+    image = image.clip(y1, y2)
+    return image
 
 
 def train(config: AttributeHashmap):

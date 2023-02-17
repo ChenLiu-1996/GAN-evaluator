@@ -7,7 +7,7 @@ plot_folder: '$ROOT/debug_plot/dcgan/'
 max_epochs: 10
 batch_size: 256
 num_workers: 4
-plot_interval: 1
+plot_interval: 50
 learning_rate: 1e-3
 beta1: 0.5
 beta2: 0.999
