@@ -13,11 +13,12 @@ Chen Liu (chen.liu.cl2482@yale.edu), Alex Wong (alex.wong@yale.edu)
 
 The script can be found in [`src/train_dcgan_svhn.py`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/train_dcgan_svhn.py)
 
-1. Real (top) and Generated (bottom) images after 50 epochs of training.
+Some visualizations of the demo script:
+- Real (top) and Generated (bottom) images after 50 epochs of training.
 <!-- <img src = "debug_plot/dcgan_svhn/epoch_0049_batch_0286_generated.png" width=800> -->
-<img src = "debug_plot/dcgan_svhn/epoch_0038_batch_0099_generated.png" width=800>
+<img src = "debug_plot/dcgan_svhn/epoch_0046_batch_0199_generated.png" width=800>
 
-2. IS and FID curves.
+- IS and FID curves.
 <img src = "debug_plot/dcgan_svhn/IS_FID_curve.png" width=800>
 
 ## The Evaluator for IS and FID
