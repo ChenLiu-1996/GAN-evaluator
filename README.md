@@ -2,6 +2,8 @@
 
 Chen Liu (chen.liu.cl2482@yale.edu), Alex Wong (alex.wong@yale.edu)
 
+*Please kindly star this repo for better reach if you find it useful.*
+
 ## Main Contributions
 1. We created a GAN evaluator for IS and FID that
     - [is easy to use](#usage),
