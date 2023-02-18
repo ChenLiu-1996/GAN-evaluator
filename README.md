@@ -72,7 +72,7 @@ python train_dcgan_svhn.py --config ../config/dcgan_svhn.yaml
 ### Environement Setup
 <details>
   <summary><b>Packages Needed</b></summary>
-
+<br>
 
 The `GAN_Evaluator` module itself only uses `numpy`, `scipy`, `torch`, `torchvision`, and (for aesthetics) `tqdm`.
 
