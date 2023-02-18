@@ -10,18 +10,20 @@ Alex Wong (alex.wong@yale.edu)
 
 ## Demo Script: Use [DCGAN](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial) to generate [SVHN](http://ufldl.stanford.edu/housenumbers/) numbers.
 
+The script can be found in [`src/train_dcgan_svhn.py`]()
+
 1. Real (top) and Generated (bottom) images after 50 epochs of training.
 <img src = "debug_plot/dcgan_svhn/IS_FID_curve.png" width=600>
 
 2. IS and FID curves.
-<img src = "debug_plot/dcgan_svhn/epoch_0002_batch_0286_generated.png" width=600>
+<img src = "debug_plot/dcgan_svhn/epoch_0049_batch_0286_generated.png" width=600>
 
 ## Introduction to the Evaluator
 <details>
   <summary><b></b></summary>
 <br>
 
-More details can be found in [`utils/eval_utils.py/GAN_Evaluator`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/eval_utils.py#L13).
+More details can be found in [`src/utils/eval_utils.py/GAN_Evaluator`]("src/utils/eval_utils.py#L13").
 
 ```
 This evaluator computes the following metrics:

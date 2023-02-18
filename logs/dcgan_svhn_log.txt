@@ -1,0 +1,35 @@
+Config: 
+model_name: dcgan
+dataset: svhn
+dataset_dir: /media/home/chliu/GAN-IS-FID-evaluator/data/
+log_folder: /media/home/chliu/GAN-IS-FID-evaluator/logs/
+save_path: /media/home/chliu/GAN-IS-FID-evaluator/checkpoints/dcgan_svhn/
+plot_folder: /media/home/chliu/GAN-IS-FID-evaluator/debug_plot/dcgan_svhn/
+max_epochs: 50
+batch_size: 256
+num_workers: 8
+plot_interval: 100
+learning_rate: 0.001
+beta1: 0.5
+beta2: 0.999
+random_seed: 1
+config_file_name: ../config/dcgan_svhn.yaml
+gpu_id: 0
+log_dir: /media/home/chliu/GAN-IS-FID-evaluator/logs/dcgan_svhn_log.txt
+
+Training History:
+Train [E 1/50, B 100/287] loss (G): 5.206, loss (D): 3.296, D(x): 0.704, D(G(z)): 0.321, IS: 3.074, FID: 248.092
+Train [E 1/50, B 200/287] loss (G): 4.224, loss (D): 2.232, D(x): 0.705, D(G(z)): 0.310, IS: 3.224, FID: 222.376
+Train [E 1/50, B 287/287] loss (G): 3.842, loss (D): 1.940, D(x): 0.699, D(G(z)): 0.306, IS: 3.147, FID: 221.651
+Train [E 2/50, B 100/287] loss (G): 2.437, loss (D): 1.340, D(x): 0.662, D(G(z)): 0.348, IS: 2.370, FID: 260.545
+Train [E 2/50, B 200/287] loss (G): 2.459, loss (D): 1.253, D(x): 0.672, D(G(z)): 0.340, IS: 2.413, FID: 254.966
+Train [E 2/50, B 287/287] loss (G): 2.456, loss (D): 1.200, D(x): 0.683, D(G(z)): 0.334, IS: 2.370, FID: 247.958
+Train [E 3/50, B 100/287] loss (G): 2.244, loss (D): 1.119, D(x): 0.688, D(G(z)): 0.338, IS: 1.940, FID: 240.347
+Train [E 3/50, B 200/287] loss (G): 2.076, loss (D): 1.247, D(x): 0.656, D(G(z)): 0.351, IS: 2.031, FID: 237.908
+Train [E 3/50, B 287/287] loss (G): 1.964, loss (D): 1.216, D(x): 0.653, D(G(z)): 0.360, IS: 1.994, FID: 234.293
+Train [E 4/50, B 100/287] loss (G): 1.833, loss (D): 1.209, D(x): 0.634, D(G(z)): 0.375, IS: 1.825, FID: 228.851
+Train [E 4/50, B 200/287] loss (G): 1.781, loss (D): 1.228, D(x): 0.624, D(G(z)): 0.383, IS: 1.819, FID: 217.378
+Train [E 4/50, B 287/287] loss (G): 1.769, loss (D): 1.214, D(x): 0.625, D(G(z)): 0.381, IS: 1.818, FID: 211.852
+Train [E 5/50, B 100/287] loss (G): 1.791, loss (D): 1.127, D(x): 0.644, D(G(z)): 0.377, IS: 1.864, FID: 194.902
+Train [E 5/50, B 200/287] loss (G): 1.761, loss (D): 1.166, D(x): 0.626, D(G(z)): 0.380, IS: 1.788, FID: 188.495
+Train [E 5/50, B 287/287] loss (G): 1.948, loss (D): 1.102, D(x): 0.665, D(G(z)): 0.348, IS: 1.907, FID: 187.767
