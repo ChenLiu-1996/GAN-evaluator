@@ -13,7 +13,33 @@ Chen Liu (chen.liu.cl2482@yale.edu), Alex Wong (alex.wong@yale.edu)
 
 The script can be found in [`src/train_dcgan_svhn.py`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/train_dcgan_svhn.py)
 
-Some visualizations of the demo script:
+- Usage from the demo script, to give you a taste.
+```
+# Declaration.
+evaluator = GAN_Evaluator(device=device,
+                          num_images_real=len(train_loader.dataset),
+                          num_images_fake=len(train_loader.dataset))
+```
+
+```
+# Before traing loop.
+evaluator.load_all_real_imgs(real_loader=train_loader, idx_in_loader=0)
+```
+
+```
+# Inside traing loop.
+if shall_plot:
+    IS_mean, IS_std, FID = evaluator.fill_fake_img_batch(fake_batch=x_fake)
+else:
+    evaluator.fill_fake_img_batch(fake_batch=x_fake, return_results=False)
+```
+
+```
+# After each epoch of training.
+evaluator.clear_fake_imgs()
+```
+
+- Some visualizations of the demo script:
 - Real (top) and Generated (bottom) images.
 <img src = "debug_plot/dcgan_svhn/epoch_0046_batch_0199_generated.png" width=800>
 
