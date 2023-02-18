@@ -15,7 +15,7 @@ Chen Liu (chen.liu.cl2482@yale.edu), Alex Wong (alex.wong@yale.edu)
     ```
     from gan_evaluator import GAN_Evaluator
     ```
-    NOTE 1: **You no longer need to copy any code from this repo in order to use `GAN_Evalutor`**! At this point, the primary purpose of this repo is a description/demonstration. With that said, you surely can clone this repo and try out the demo script. Also, you may find it easier to copy and modify the code if you want slightly different behaviors.
+    NOTE 1: **You no longer need to copy any code from this repo in order to use `GAN_Evalutor`**! At this point, the primary purpose of this repo is description and demonstration. With that said, you surely can clone this repo and try out the demo script. Also, you may find it easier to copy and modify the code if you want slightly different behaviors.
 
     NOTE 2: During `pip install gan-evaluator`, the dependencies of `GAN_Evaluator` (but not of the demo script) are also installed.
 
