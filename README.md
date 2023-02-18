@@ -5,7 +5,10 @@ Chen Liu (chen.liu.cl2482@yale.edu)
 Alex Wong (alex.wong@yale.edu)
 
 ## Main Contributions
-1. We created a GAN evaluator for IS and FID that is easy to use, flexible for multiple input interfaces, and capable of on-the-fly evaluation during training.
+1. We created a GAN evaluator for IS and FID that
+    - is easy to use,
+    - is flexible for multiple input interfaces, and
+    - supports on-the-fly evaluation during training.
 2. We provided a simple demo script to demonstrate one common use case.
 
 ## Demo Script: Use [DCGAN](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial) to generate [SVHN](http://ufldl.stanford.edu/housenumbers/) numbers.
