@@ -2,7 +2,7 @@
 
 Chen Liu (chen.liu.cl2482@yale.edu), Alex Wong (alex.wong@yale.edu)
 
-*Please kindly :star:star:star: [![Github Stars](https://img.shields.io/github/stars/ChenLiu-1996/GAN-IS-FID-evaluator.svg?style=social&label=Stars)](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/) this repo for better reach if you find it useful. Let's help the community!*
+*Please kindly :star:[![Github Stars](https://img.shields.io/github/stars/ChenLiu-1996/GAN-IS-FID-evaluator.svg?style=social&label=Stars)](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/):star: this repo for better reach if you find it useful. Let's help the community!*
 
 
 ## Main Contributions
