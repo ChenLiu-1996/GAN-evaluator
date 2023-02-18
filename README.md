@@ -67,7 +67,7 @@ The script can be found in [`src/train_dcgan_svhn.py`](https://github.com/ChenLi
   <summary><b>Introduction to the Evaluator</b></summary>
 <br>
 
-More details can be found in [`src/utils/eval_utils.py/GAN_Evaluator`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/eval_utils.py#L13).
+More details can be found in [`src/utils/gan_evaluator.py/GAN_Evaluator`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/gan_evaluator.py#L13).
 
 ```
 This evaluator computes the following metrics:
@@ -121,7 +121,7 @@ GAN-IS-FID-evaluator
     ├── logs (*)
     └── src
         ├── utils
-        |   ├── `eval_utils.py`: THIS CONTAINS OUR `GAN_Evaluator`.
+        |   ├── `gan_evaluator.py`: THIS CONTAINS OUR `GAN_Evaluator`.
         |   └── other utility files.
         └── `train_dcgan_svhn.py`: our demo script.
 ```
@@ -134,7 +134,7 @@ git clone git@github.com:ChenLiu-1996/GAN-IS-FID-evaluator.git
 cd src
 python train_dcgan_svhn.py --config ../config/dcgan_svhn.yaml
 ```
-- **To integrate our evaluator into your existing project, you can simply copy [`src/utils/eval_utils.py`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/eval_utils.py) to an appropriate folder in your project, and import `GAN_Evaluator` to whichever file it is needed.**
+- **To integrate our evaluator into your existing project, you can simply copy [`src/utils/gan_evaluator.py`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/gan_evaluator.py) to an appropriate folder in your project, and import `GAN_Evaluator` to whichever file it is needed.**
 
 - We will add our citation bibtex, and we would appreciate if you reference our work in case this repository helps you in your research.
 

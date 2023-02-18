@@ -27,7 +27,7 @@ import_dir = '/'.join(os.path.realpath(__file__).split('/')[:-1])
 sys.path.insert(0, import_dir)
 
 from utils.attribute_hashmap import AttributeHashmap
-from utils.eval_utils import GAN_Evaluator
+from utils.gan_evaluator import GAN_Evaluator
 from utils.log_utils import log
 from utils.seed import seed_everything
 
