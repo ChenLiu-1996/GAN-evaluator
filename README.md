@@ -12,9 +12,10 @@ Alex Wong (alex.wong@yale.edu)
 
 ## Introduction to the Evaluator
 <details>
-  <summary><b>More details can be found in [`utils/eval_utils.py/GAN_Evaluator`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/eval_utils.py#L13).</b></summary>
+  <summary><b></b></summary>
 <br>
 
+More details can be found in [`utils/eval_utils.py/GAN_Evaluator`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/eval_utils.py#L13).
 
 ```
 This evaluator computes the following metrics:
