@@ -20,8 +20,8 @@ The script can be found in [`src/train_dcgan_svhn.py`](https://github.com/ChenLi
 
     ```
     evaluator = GAN_Evaluator(device=device,
-                            num_images_real=len(train_loader.dataset),
-                            num_images_fake=len(train_loader.dataset))
+                              num_images_real=len(train_loader.dataset),
+                              num_images_fake=len(train_loader.dataset))
     ```
     </details>
 
