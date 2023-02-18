@@ -7,17 +7,17 @@ Chen Liu (chen.liu.cl2482@yale.edu), Alex Wong (alex.wong@yale.edu)
 *Please kindly :star2:[![Github Stars](https://img.shields.io/github/stars/ChenLiu-1996/GAN-IS-FID-evaluator.svg?style=social&label=Stars)](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/):star2: this repo for better reach if you find it useful. Let's help out the community!*
 
 ## NEWS
-- **[Feb 18, 2022]**
+### [Feb 18, 2023]
 
-    **Now available on PyPI!** Now you can **pip install it** to your desired environment via:
-    ```
-    pip install gan-evaluator
-    ```
-    And in your Python project, wherever you need the `GAN_Evaluator`, you can import via:
-    ```
-    from gan_evaluator import GAN_Evaluator
-    ```
-    NOTE 1: **You no longer need to copy any code from this repo in order to use `GAN_Evalutor`**! At this point, the primary purpose of this repo is description and demonstration. With that said, you surely can clone this repo and try out the demo script. Also, you may find it easier to copy and modify the code if you want slightly different behaviors.
+**Now available on PyPI!** Now you can **pip install it** to your desired environment via:
+```
+pip install gan-evaluator
+```
+And in your Python project, wherever you need the `GAN_Evaluator`, you can import via:
+```
+from gan_evaluator import GAN_Evaluator
+```
+NOTE 1: **You no longer need to copy any code from this repo in order to use `GAN_Evalutor`**! At this point, the primary purpose of this repo is description and demonstration. With that said, you surely can clone this repo and try out the demo script. Also, you may find it easier to copy and modify the code if you want slightly different behaviors.
 
     NOTE 2: During `pip install gan-evaluator`, the dependencies of `GAN_Evaluator` (but not of the demo script) are also installed.
 
@@ -150,7 +150,7 @@ git clone git@github.com:ChenLiu-1996/GAN-IS-FID-evaluator.git
 cd src
 python train_dcgan_svhn.py --config ../config/dcgan_svhn.yaml
 ```
-- To integrate our evaluator into your existing project, you can simply copy [`src/utils/gan_evaluator.py`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/gan_evaluator.py) to an appropriate folder in your project, and import `GAN_Evaluator` to wherever you find necessary.
+- To integrate our evaluator into your existing project, you can simply copy [`src/utils/gan_evaluator.py`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/gan_evaluator.py) to an appropriate folder in your project, and import `GAN_Evaluator` to wherever you find necessary. [**Update: Now you can directly install via pip!**](#feb-18-2023)
 
 - We will add our citation bibtex, and we would appreciate if you reference our work in case this repository helps you in your research.
 
