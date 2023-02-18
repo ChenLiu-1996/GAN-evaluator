@@ -61,7 +61,7 @@ COMMON USE CASES
 
 </details>
 
-### The repository is structured in the following manner.
+## Repository Hierarchy.
 ```
 GAN-IS-FID-evaluator
     ├── config
@@ -77,7 +77,7 @@ GAN-IS-FID-evaluator
 ```
 Folders marked with (*), if not exist, will be created automatically when you run [`train_dcgan_svhn.py`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/train_dcgan_svhn.py).
 
-### Usage
+## Usage
 To run our example use case, do the following after activating the proper environment.
 ```
 git clone git@github.com:ChenLiu-1996/GAN-IS-FID-evaluator.git
@@ -85,7 +85,7 @@ cd src
 python train_dcgan_svhn.py --config ../config/dcgan_svhn.yaml
 ```
 
-### Environement Setup
+## Environement Setup
 <details>
   <summary><b>Packages Needed</b></summary>
 <br>
