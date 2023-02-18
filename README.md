@@ -4,6 +4,17 @@ Chen Liu (chen.liu.cl2482@yale.edu), Alex Wong (alex.wong@yale.edu)
 
 *Please kindly :star2:[![Github Stars](https://img.shields.io/github/stars/ChenLiu-1996/GAN-IS-FID-evaluator.svg?style=social&label=Stars)](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/):star2: this repo for better reach if you find it useful. Let's help out the community!*
 
+## NEWS
+- [Feb 18, 2022] Now available on PyPI! Now you can install it directly to your desired environment via:
+    ```
+    python -m pip install gan-evaluator
+    ```
+    And in your Python project, wherever you need the `GAN_Evaluator`, you can import via:
+    ```
+    from gan_evaluator import GAN_Evaluator
+    ```
+    NOTE: You no longer need to copy any code from this repo in order to use `GAN_Evalutor`!
+    NOTE: During pip installation, the dependencies of `GAN_Evaluator` are included.
 
 ## Main Contributions
 1. We created a GAN evaluator for IS and FID that
