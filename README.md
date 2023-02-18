@@ -8,8 +8,13 @@ Alex Wong (alex.wong@yale.edu)
 1. We created a GAN evaluator for IS and FID that is easy to use and flexible.
 2. We provided a simple script to demonstrate one common use case.
 
-Quick introduction to the Evaluator
-(More details can be found in [`utils/eval_utils.py/GAN_Evaluator`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/eval_utils.py#L13).)
+## D
+
+## Introduction to the Evaluator
+<details>
+  <summary><b>More details can be found in [`utils/eval_utils.py/GAN_Evaluator`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/eval_utils.py#L13).</b></summary>
+<br>
+
 
 ```
 This evaluator computes the following metrics:
@@ -44,6 +49,8 @@ COMMON USE CASES
 2. For the purpose of offline evaluation of a saved dataset:
     We recommend pre-loading the real images and fake images.
 ```
+
+</details>
 
 ### The repository is structured in the following manner.
 ```

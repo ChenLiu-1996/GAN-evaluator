@@ -263,9 +263,9 @@ def train(config: AttributeHashmap):
                     ax.set_axis_off()
 
                 plt.tight_layout()
-                plt.savefig(
-                    '%s/epoch_%s_batch_%d_generated' %
-                    (config.plot_folder, str(epoch_idx).zfill(4), batch_idx))
+                plt.savefig('%s/epoch_%s_batch_%s_generated' %
+                            (config.plot_folder, str(epoch_idx).zfill(4),
+                             str(batch_idx).zfill(4)))
                 plt.close(fig=fig)
 
                 log('Train [E %s/%s, B %s/%s] loss (G): %.3f, loss (D): %.3f, D(x): %.3f, D(G(z)): %.3f, IS: %.3f, FID: %.3f'
@@ -283,11 +283,13 @@ def train(config: AttributeHashmap):
         ax.plot(epoch_list, IS_list, color='firebrick')
         ax.set_ylabel('Inception Score (IS)')
         ax.set_xlabel('Epoch')
+        ax.spines[['right', 'top']].set_visible(False)
         ax = fig.add_subplot(1, 2, 2)
         ax.scatter(epoch_list, FID_list, color='firebrick')
         ax.plot(epoch_list, FID_list, color='firebrick')
         ax.set_ylabel('Frechet Inception Distance (FID)')
         ax.set_xlabel('Epoch')
+        ax.spines[['right', 'top']].set_visible(False)
         plt.tight_layout()
         plt.savefig('%s/IS_FID_curve' % config.plot_folder)
         plt.close(fig=fig)
@@ -310,7 +312,7 @@ def parse_setting(config: AttributeHashmap) -> AttributeHashmap:
         if type(config[key]) == str and '$ROOT' in config[key]:
             config[key] = config[key].replace('$ROOT', root)
 
-    config.log_dir = config.log_folder + '/' + \
+    config.log_dir = config.log_folder.rstrip('/') + '/' + \
         os.path.basename(
             config.config_file_name).replace('.yaml', '') + '_log.txt'
 

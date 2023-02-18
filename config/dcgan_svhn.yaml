@@ -4,7 +4,7 @@ dataset_dir: '$ROOT/data/'
 log_folder: '$ROOT/logs/'
 save_path: '$ROOT/checkpoints/dcgan_svhn/'
 plot_folder: '$ROOT/debug_plot/dcgan_svhn/'
-max_epochs: 40
+max_epochs: 50
 batch_size: 256
 num_workers: 8
 plot_interval: 100
