@@ -59,7 +59,7 @@ The script can be found in [`src/train_dcgan_svhn.py`](https://github.com/ChenLi
     - IS and FID curves.
     <img src = "debug_plot/dcgan_svhn/IS_FID_curve.png" width=800>
 
-## Try it out: The Evaluator for IS and FID
+## Details: The Evaluator for IS and FID
 <details>
   <summary><b>Introduction to the Evaluator</b></summary>
 <br>
