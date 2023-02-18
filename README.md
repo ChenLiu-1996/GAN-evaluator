@@ -10,7 +10,7 @@ Alex Wong (alex.wong@yale.edu)
 
 ## Demo Script: Use [DCGAN](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial) to generate [SVHN](http://ufldl.stanford.edu/housenumbers/) numbers.
 
-The script can be found in [`src/train_dcgan_svhn.py`]()
+The script can be found in [`src/train_dcgan_svhn.py`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/train_dcgan_svhn.py)
 
 1. Real (top) and Generated (bottom) images after 50 epochs of training.
 <img src = "debug_plot/dcgan_svhn/IS_FID_curve.png" width=600>
@@ -18,12 +18,12 @@ The script can be found in [`src/train_dcgan_svhn.py`]()
 2. IS and FID curves.
 <img src = "debug_plot/dcgan_svhn/epoch_0049_batch_0286_generated.png" width=600>
 
-## Introduction to the Evaluator
+## The PyTorch GAN Evaluator for IS and FID.
 <details>
-  <summary><b></b></summary>
+  <summary><b>Introduction to the Evaluator</b></summary>
 <br>
 
-More details can be found in [`src/utils/eval_utils.py/GAN_Evaluator`]("src/utils/eval_utils.py#L13").
+More details can be found in [`src/utils/eval_utils.py/GAN_Evaluator`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/eval_utils.py#L13).
 
 ```
 This evaluator computes the following metrics:
@@ -75,7 +75,7 @@ GAN-IS-FID-evaluator
         |   └── other utility files.
         └── `train_dcgan_svhn.py`: our example use case.
 ```
-Folders marked with (*) will be created automatically when you run `train_dcgan_svhn.py`.
+Folders marked with (*), if not exist, will be created automatically when you run (`train_dcgan_svhn.py`)[https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/train_dcgan_svhn.py].
 
 ### Usage
 To run our example use case, do the following after activating the proper environment.
