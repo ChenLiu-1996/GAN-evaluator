@@ -4,6 +4,8 @@ Chen Liu (chen.liu.cl2482@yale.edu), Alex Wong (alex.wong@yale.edu)
 
 *Please kindly :star2:[![Github Stars](https://img.shields.io/github/stars/ChenLiu-1996/GAN-IS-FID-evaluator.svg?style=social&label=Stars)](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/):star2: this repo for better reach if you find it useful. Let's help out the community!*
 
+[![Latest PyPI version](https://img.shields.io/pypi/v/gan-evaluator.svg)](https://pypi.org/project/gan-evaluator/)
+
 ## NEWS
 - [Feb 18, 2022] Now available on PyPI! Now you can install it directly to your desired environment via:
     ```
