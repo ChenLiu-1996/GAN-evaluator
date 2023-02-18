@@ -87,7 +87,7 @@ cd src
 python train_dcgan_svhn.py --config ../config/dcgan_svhn.yaml
 ```
 
-- To integrate our evaluator into your existing project, you can simply copy [`src/utils/eval_utils.py`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/eval_utils.py) to an appropriate folder in your project, and import `GAN_Evaluator` to where you need it.
+- *To integrate our evaluator into your existing project, you can simply copy [`src/utils/eval_utils.py`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/eval_utils.py) to an appropriate folder in your project, and import `GAN_Evaluator` to where you need it.*
 
 - We will add our citation bibtex, and we would appreciate if you reference our work in case this repository helps you in your research.
 
