@@ -110,7 +110,7 @@ def train(config: AttributeHashmap):
                 brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1)
         ],
                                            p=0.8),
-        torchvision.transforms.ToTensor()
+        torchvision.transforms.ToTensor(),
     ])
     train_loader = torch.utils.data.DataLoader(torchvision.datasets.SVHN(
         config.dataset_dir,
@@ -158,6 +158,7 @@ def train(config: AttributeHashmap):
         generator.train()
         discriminator.train()
         num_visited = 0
+        y_pred_real_sum, y_pred_fake_sum, loss_D_sum, loss_G_sum = 0, 0, 0, 0
 
         for batch_idx, (x, _) in enumerate(tqdm(train_loader)):
             shall_plot = batch_idx % config.plot_interval == config.plot_interval - 1 or batch_idx == len(
@@ -172,11 +173,10 @@ def train(config: AttributeHashmap):
             x_real = x.type(torch.FloatTensor).to(device)
 
             # Update discriminator.
-            y_pred_real_sum, y_pred_fake_sum, loss_D_sum = 0, 0, 0
             z = torch.randn([B, generator.latent_dim, 1, 1], device=device)
             # Decouple from the generator's weights.
             with torch.no_grad():
-                x_fake = generator.forward(z)
+                x_fake = generator(z)
 
             # Here comes the IS and FID values.
             # These are the values evaluated with the data available so far.
@@ -188,8 +188,8 @@ def train(config: AttributeHashmap):
                 EVALUATOR.fill_fake_img_batch(fake_batch=x_fake,
                                               return_results=False)
 
-            y_pred_real = discriminator.forward(x_real).view(-1)
-            y_pred_fake = discriminator.forward(x_fake).view(-1)
+            y_pred_real = discriminator(x_real).view(-1)
+            y_pred_fake = discriminator(x_fake).view(-1)
 
             loss_D = loss_fn(y_pred_real, ones) + loss_fn(y_pred_fake, zeros)
 
@@ -202,10 +202,9 @@ def train(config: AttributeHashmap):
             loss_D_sum += loss_D.item() * B
 
             # Update generator.
-            loss_G_sum = 0
-            x_fake = generator.forward(z)
+            x_fake = generator(z)
 
-            y_pred_fake = discriminator.forward(x_fake).view(-1)
+            y_pred_fake = discriminator(x_fake).view(-1)
             loss_G = loss_fn(y_pred_fake, ones)
 
             opt_G.zero_grad()
@@ -226,8 +225,7 @@ def train(config: AttributeHashmap):
                     real_image = real_image.type(torch.FloatTensor).to(device)
                     with torch.no_grad():
                         discriminator.eval()
-                        y_pred_real = discriminator.forward(real_image).view(
-                            -1)
+                        y_pred_real = discriminator(real_image).view(-1)
                         discriminator.train()
                     real_image = np.moveaxis(real_image.cpu().detach().numpy(),
                                              1, -1).reshape(H, W, 3)
@@ -241,10 +239,10 @@ def train(config: AttributeHashmap):
                                         generator=rng)
                     with torch.no_grad():
                         generator.eval()
-                        generated_image = generator.forward(fix_z)
+                        generated_image = generator(fix_z)
                         generator.train()
                         discriminator.eval()
-                        y_pred_fake = discriminator.forward(
+                        y_pred_fake = discriminator(
                             generated_image.to(device)).view(-1)
                         discriminator.train()
                     generated_image = normalize(generated_image,

@@ -1,5 +1,5 @@
 import copy
-from typing import Tuple, Union
+from typing import List, Tuple, Union
 
 import numpy as np
 import torch
@@ -43,10 +43,11 @@ class GAN_Evaluator(object):
     1. For the purpose of on-the-fly evaluation during GAN training:
         We recommend pre-loading the real images using the dataloader format, and
         populate the fake images using the per-batch format as training goes on.
-        At the end of each epoch, you can clean the fake images using the method:
+        - At the end of each epoch, you can clean the fake images using:
             `clear_fake_imgs`
-        Since it is uncommon that we want to clear the real images, we decided
-        to intentionally not implement that method.
+        - In *unusual* cases where your real images change (such as in progressive growing GANs),
+        you may want to clear the real images. You can do so via:
+            `clear_real_imgs`
 
     2. For the purpose of offline evaluation of a saved dataset:
         We recommend pre-loading the real images and fake images.
@@ -100,7 +101,7 @@ class GAN_Evaluator(object):
 
     def fill_real_img_batch(self, real_batch: torch.Tensor) -> None:
         batch_size = real_batch.shape[0]
-        real_batch = standardize(real_batch)
+        real_batch = normalize(real_batch)
         real_batch = real_batch.to(self.device)
 
         _, _, H, W = real_batch.shape
@@ -120,7 +121,7 @@ class GAN_Evaluator(object):
             fake_batch: torch.Tensor,
             return_results: bool = True) -> Union[None, Tuple[float]]:
         batch_size = fake_batch.shape[0]
-        fake_batch = standardize(fake_batch)
+        fake_batch = normalize(fake_batch)
         fake_batch = fake_batch.to(self.device)
 
         _, _, H, W = fake_batch.shape
@@ -167,6 +168,11 @@ class GAN_Evaluator(object):
         FID = self.compute_FID()
         return IS_mean, IS_std, FID
 
+    def clear_real_imgs(self) -> None:
+        self.activation_vec_real = np.empty((self.num_images, 2048))
+        self.vec_real_pointer = 0
+        return
+
     def clear_fake_imgs(self) -> None:
         self.activation_vec_fake = np.empty((self.num_images, 2048))
         self.prediction_vec_fake = np.empty((self.num_images, 1000))
@@ -204,11 +210,22 @@ class GAN_Evaluator(object):
         return fid_value
 
 
-def standardize(
-        imgs: Union[np.array, torch.Tensor]) -> Union[np.array, torch.Tensor]:
-    if imgs.max() > 1 or imgs.min() < -1:
-        imgs = 2 * (imgs - imgs.min()) / (imgs.max() - imgs.min()) - 1
-    return imgs
+def normalize(
+        image: Union[np.array, torch.Tensor],
+        dynamic_range: List[float] = [-1, 1]) -> Union[np.array, torch.Tensor]:
+    assert len(dynamic_range) == 2
+
+    x1, x2 = image.min(), image.max()
+    y1, y2 = dynamic_range[0], dynamic_range[1]
+
+    slope = (y2 - y1) / (x2 - x1)
+    offset = (y1 * x2 - y2 * x1) / (x2 - x1)
+
+    image = image * slope + offset
+
+    # Fix precision issue.
+    image = image.clip(y1, y2)
+    return image
 
 
 def frechet_distance(mu1, sigma1, mu2, sigma2, eps=1e-6):
