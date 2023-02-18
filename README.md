@@ -6,9 +6,15 @@ Alex Wong (alex.wong@yale.edu)
 
 ## Main Contributions
 1. We created a GAN evaluator for IS and FID that is easy to use and flexible.
-2. We provided a simple script to demonstrate one common use case.
+2. We provided a simple demo script to demonstrate one common use case.
 
-## D
+## Demo Script: Use [DCGAN](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial) to generate [SVHN](http://ufldl.stanford.edu/housenumbers/) numbers.
+
+1. Real (top) and Generated (bottom) images after 50 epochs of training.
+<img src = "debug_plot/dcgan_svhn/IS_FID_curve.png" width=600>
+
+2. IS and FID curves.
+<img src = "debug_plot/dcgan_svhn/epoch_0002_batch_0286_generated.png" width=600>
 
 ## Introduction to the Evaluator
 <details>
