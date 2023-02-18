@@ -276,10 +276,7 @@ def train(config: AttributeHashmap):
                     filepath=config.log_dir,
                     to_console=False)
 
-        # Need to clear up the fake images every epoch.
-        EVALUATOR.clear_fake_imgs()
-
-        # Plot the IS and FID curves.
+        # Update the IS and FID curves every epoch.
         fig = plt.figure(figsize=(10, 4))
         ax = fig.add_subplot(1, 2, 1)
         ax.scatter(epoch_list, IS_list, color='firebrick')
@@ -295,6 +292,8 @@ def train(config: AttributeHashmap):
         plt.savefig('%s/IS_FID_curve' % config.plot_folder)
         plt.close(fig=fig)
 
+        # Need to clear up the fake images every epoch.
+        EVALUATOR.clear_fake_imgs()
     return
 
 
