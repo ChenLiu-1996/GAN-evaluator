@@ -170,7 +170,7 @@ python3 -m pip install ninja
 </details>
 
 ## Acknowledgements
-1. The code for the GAN_Evaluator (especially for the "correct" computation of IS and FID) is inspired by:
+1. The code for the `GAN_Evaluator` (especially for the "correct" computation of IS and FID) is inspired by:
     - https://github.com/sbarratt/inception-score-pytorch/blob/master/inception_score.py
     - https://www.kaggle.com/code/ibtesama/gan-in-pytorch-with-fid
     - https://github.com/mseitzer/pytorch-fid/blob/master/src/pytorch_fid/fid_score.py
