@@ -7,7 +7,7 @@ Alex Wong (alex.wong@yale.edu)
 ## Main Contributions
 1. We created a GAN evaluator for IS and FID that
     - is easy to use,
-    - is flexible for multiple input interfaces, and
+    - accepts data as either dataloaders or individual batches, and
     - supports on-the-fly evaluation during training.
 2. We provided a simple demo script to demonstrate one common use case.
 
