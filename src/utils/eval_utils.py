@@ -61,7 +61,8 @@ class GAN_Evaluator(object):
 
     def __init__(self,
                  device: torch.device = torch.device('cpu'),
-                 num_images: int = 1000,
+                 num_images_real: int = 1000,
+                 num_images_fake: int = 1000,
                  IS_splits: int = 1) -> None:
         # NOTE: To pass in `num_images`, you can simply use `len(your_dataloader.dataset)`.
 
@@ -89,10 +90,11 @@ class GAN_Evaluator(object):
         self.upsample = torch.nn.Upsample(size=(299, 299),
                                           mode='bilinear').type(self.dtype)
 
-        self.num_images = num_images
-        self.activation_vec_real = np.empty((self.num_images, 2048))
-        self.activation_vec_fake = np.empty((self.num_images, 2048))
-        self.prediction_vec_fake = np.empty((self.num_images, 1000))
+        self.num_images_real = num_images_real
+        self.num_images_fake = num_images_fake
+        self.activation_vec_real = np.empty((self.num_images_real, 2048))
+        self.activation_vec_fake = np.empty((self.num_images_fake, 2048))
+        self.prediction_vec_fake = np.empty((self.num_images_fake, 1000))
         self.vec_real_pointer = 0
         self.vec_fake_pointer = 0
 
@@ -169,13 +171,13 @@ class GAN_Evaluator(object):
         return IS_mean, IS_std, FID
 
     def clear_real_imgs(self) -> None:
-        self.activation_vec_real = np.empty((self.num_images, 2048))
+        self.activation_vec_real = np.empty((self.num_images_real, 2048))
         self.vec_real_pointer = 0
         return
 
     def clear_fake_imgs(self) -> None:
-        self.activation_vec_fake = np.empty((self.num_images, 2048))
-        self.prediction_vec_fake = np.empty((self.num_images, 1000))
+        self.activation_vec_fake = np.empty((self.num_images_fake, 2048))
+        self.prediction_vec_fake = np.empty((self.num_images_fake, 1000))
         self.vec_fake_pointer = 0
         return
 

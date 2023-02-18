@@ -149,7 +149,8 @@ def train(config: AttributeHashmap):
 
     # Our GAN Evaluator.
     EVALUATOR = GAN_Evaluator(device=device,
-                              num_images=len(train_loader.dataset))
+                              num_images_real=len(train_loader.dataset),
+                              num_images_fake=len(train_loader.dataset))
 
     # We can pre-load the real images in the format of a dataloader.
     # Of course you can do that in individual batches, but this way is neater.
@@ -157,6 +158,7 @@ def train(config: AttributeHashmap):
     # If we only have images in the datalaoder, we can set `idx_in_loader` = None.
     EVALUATOR.load_all_real_imgs(real_loader=train_loader, idx_in_loader=0)
 
+    epoch_list, IS_list, FID_list = [], [], []
     for epoch_idx in range(config.max_epochs):
         generator.train()
         discriminator.train()
@@ -187,6 +189,9 @@ def train(config: AttributeHashmap):
             if shall_plot:
                 IS_mean, IS_std, FID = EVALUATOR.fill_fake_img_batch(
                     fake_batch=x_fake)
+                epoch_list.append(epoch_idx + batch_idx / len(train_loader))
+                IS_list.append(IS_mean)
+                FID_list.append(FID)
             else:
                 EVALUATOR.fill_fake_img_batch(fake_batch=x_fake,
                                               return_results=False)
@@ -273,6 +278,22 @@ def train(config: AttributeHashmap):
 
         # Need to clear up the fake images every epoch.
         EVALUATOR.clear_fake_imgs()
+
+        # Plot the IS and FID curves.
+        fig = plt.figure(figsize=(10, 4))
+        ax = fig.add_subplot(1, 2, 1)
+        ax.scatter(epoch_list, IS_list, color='firebrick')
+        ax.plot(epoch_list, IS_list, color='firebrick')
+        ax.set_ylabel('Inception Score (IS)')
+        ax.set_xlabel('Epoch')
+        ax = fig.add_subplot(1, 2, 2)
+        ax.scatter(epoch_list, FID_list, color='firebrick')
+        ax.plot(epoch_list, FID_list, color='firebrick')
+        ax.set_ylabel('Frechet Inception Distance (FID)')
+        ax.set_xlabel('Epoch')
+        plt.tight_layout()
+        plt.savefig('%s/IS_FID_curve' % config.plot_folder)
+        plt.close(fig=fig)
 
     return
 
