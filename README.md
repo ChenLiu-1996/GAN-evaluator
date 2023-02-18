@@ -9,7 +9,7 @@ Alex Wong (alex.wong@yale.edu)
 2. We provided a simple script to demonstrate one common use case.
 
 Quick introduction to the Evaluator
-(More details can be found in `utils/eval_utils.py/GAN_Evaluator`.)
+(More details can be found in [`utils/eval_utils.py/GAN_Evaluator`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/eval_utils.py#L13).)
 
 ```
 This evaluator computes the following metrics:
