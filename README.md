@@ -70,6 +70,14 @@ python train_dcgan_svhn.py --config ../config/dcgan_svhn.yaml
 ```
 
 ### Environement Setup
+<details>
+  <summary><b>Packages Needed</b></summary>
+
+The module itself only uses `numpy`, `scipy`, `torch`, `torchvision`, and (for aesthetics) `tqdm`.
+
+To run the example script, it additionally requires `matplotlib`, `argparse`, and `yaml`.
+
+</details>
 
 <details>
   <summary><b>On our Yale Vision Lab server</b></summary>
