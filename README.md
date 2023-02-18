@@ -18,7 +18,7 @@ The script can be found in [`src/train_dcgan_svhn.py`](https://github.com/ChenLi
 2. IS and FID curves.
 <img src = "debug_plot/dcgan_svhn/IS_FID_curve.png" width=600>
 
-## The PyTorch GAN Evaluator for IS and FID.
+## The GAN Evaluator for IS and FID.
 <details>
   <summary><b>Introduction to the Evaluator</b></summary>
 <br>
