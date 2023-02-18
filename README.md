@@ -75,17 +75,24 @@ GAN-IS-FID-evaluator
         ├── utils
         |   ├── `eval_utils.py`: THIS CONTAINS OUR `GAN_Evaluator`.
         |   └── other utility files.
-        └── `train_dcgan_svhn.py`: our example use case.
+        └── `train_dcgan_svhn.py`: our demo script.
 ```
 Folders marked with (*), if not exist, will be created automatically when you run [`train_dcgan_svhn.py`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/train_dcgan_svhn.py).
 
 ## Usage
-To run our example use case, do the following after activating the proper environment.
+- To run our demo script, do the following after activating the proper environment.
 ```
 git clone git@github.com:ChenLiu-1996/GAN-IS-FID-evaluator.git
 cd src
 python train_dcgan_svhn.py --config ../config/dcgan_svhn.yaml
 ```
+
+- To integrate our evaluator into your existing project, you can simply copy [`src/utils/eval_utils.py`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/eval_utils.py) to an appropriate folder in your project, and import `GAN_Evaluator` to where you need it.
+
+- We will add our citation bibtex, and we would appreciate if you reference our work in case this repository helps you in your research.
+
+## Citation
+To be added.
 
 ## Environement Setup
 <details>

@@ -1,3 +1,7 @@
+# Copyright: MIT Licence.
+# Chen Liu (chen.liu.cl2482@yale.edu)
+# https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator
+
 import copy
 from typing import List, Tuple, Union
 

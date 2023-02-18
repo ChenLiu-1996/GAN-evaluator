@@ -1,3 +1,7 @@
+# Copyright: MIT Licence.
+# Chen Liu (chen.liu.cl2482@yale.edu)
+# https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator
+
 '''
 Example: DCGAN on SVHN dataset.
 
