@@ -14,7 +14,7 @@ Chen Liu (chen.liu.cl2482@yale.edu), Alex Wong (alex.wong@yale.edu)
     from gan_evaluator import GAN_Evaluator
     ```
     NOTE: **You no longer need to copy any code from this repo in order to use `GAN_Evalutor`**! At this point, the primary purpose of this repo is a description/demonstration. With that said, you surely can clone this repo and try out the demo script.
-    NOTE: During pip installation, the dependencies of `GAN_Evaluator` (but not of the demo code) are also installed.
+    NOTE: During `pip install gan-evaluator`, the dependencies of `GAN_Evaluator` (but not of the demo script) are also installed.
 
 ## Main Contributions
 1. We created a GAN evaluator for IS and FID that
