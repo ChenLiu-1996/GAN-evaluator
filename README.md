@@ -47,7 +47,7 @@ The real and fake images can be provided to this evaluator in either of the foll
     `fill_real_img_batch`
     `fill_fake_img_batch`
 
-!!! Please note: the current IS and FID will be returned upon completion of either of the following:
+!!! Please note: the latest IS and FID will be returned upon completion of either of the following:
     `load_all_fake_imgs`
     `fill_fake_img_batch`
 Return format:
