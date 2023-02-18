@@ -1,7 +1,10 @@
 '''
 Example: DCGAN on SVHN dataset.
 
-This is just a simple example to show how to interface with our GAN_Evaluator
+This is just a simple example to show how to interface with our GAN_Evaluator.
+
+The DCGAN architecture/training is adapted from the PyTorch DCGAN tutorial.
+https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html
 '''
 
 import argparse

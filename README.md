@@ -64,7 +64,7 @@ Folders marked with (*) will be created automatically when you run `train_dcgan_
 ### Usage
 To run our example use case, do the following after activating the proper environment.
 ```
-git clone
+git clone git@github.com:ChenLiu-1996/GAN-IS-FID-evaluator.git
 cd src
 python train_dcgan_svhn.py --config ../config/dcgan_svhn.yaml
 ```
