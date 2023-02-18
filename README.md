@@ -4,6 +4,9 @@ Chen Liu (chen.liu.cl2482@yale.edu), Alex Wong (alex.wong@yale.edu)
 
 *Please kindly star this repo for better reach if you find it useful.*
 
+[![Github Stars](https://img.shields.io/github/stars/ChenLiu-1996/GAN-IS-FID-evaluator.svg?style=social&label=Stars)](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/)
+
+
 ## Main Contributions
 1. We created a GAN evaluator for IS and FID that
     - [is easy to use](#usage),
