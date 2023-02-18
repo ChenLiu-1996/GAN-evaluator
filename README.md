@@ -34,42 +34,30 @@ The script can be found in [`src/train_dcgan_svhn.py`](https://github.com/ChenLi
 
 - Usage from the demo script, to give you a taste.
 
-    <details>
-    <summary><b>Declaration</b></summary>
-
+    **Declaration**
     ```
     evaluator = GAN_Evaluator(device=device,
                               num_images_real=len(train_loader.dataset),
                               num_images_fake=len(train_loader.dataset))
     ```
-    </details>
 
-    <details>
-    <summary><b>Before traing loop</b></summary>
-
+    **Before traing loop**
     ```
     evaluator.load_all_real_imgs(real_loader=train_loader, idx_in_loader=0)
     ```
-    </details>
 
-    <details>
-    <summary><b>Inside traing loop</b></summary>
-
+    **Inside traing loop**
     ```
     if shall_plot:
         IS_mean, IS_std, FID = evaluator.fill_fake_img_batch(fake_batch=x_fake)
     else:
         evaluator.fill_fake_img_batch(fake_batch=x_fake, return_results=False)
     ```
-    </details>
 
-    <details>
-    <summary><b>After each epoch of training</b></summary>
-
+    **After each epoch of training**
     ```
     evaluator.clear_fake_imgs()
     ```
-    </details>
 
 - Some visualizations of the demo script:
     - Real (top) and Generated (bottom) images.
