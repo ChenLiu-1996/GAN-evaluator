@@ -152,7 +152,7 @@ def train(config: AttributeHashmap):
     loss_fn = torch.nn.BCELoss()
 
     # Our GAN Evaluator.
-    EVALUATOR = GAN_Evaluator(device=device,
+    evaluator = GAN_Evaluator(device=device,
                               num_images_real=len(train_loader.dataset),
                               num_images_fake=len(train_loader.dataset))
 
@@ -160,7 +160,7 @@ def train(config: AttributeHashmap):
     # Of course you can do that in individual batches, but this way is neater.
     # Because in CIFAR10, each batch contains a (image, label) pair, we set `idx_in_loader` = 0.
     # If we only have images in the datalaoder, we can set `idx_in_loader` = None.
-    EVALUATOR.load_all_real_imgs(real_loader=train_loader, idx_in_loader=0)
+    evaluator.load_all_real_imgs(real_loader=train_loader, idx_in_loader=0)
 
     epoch_list, IS_list, FID_list = [], [], []
     for epoch_idx in range(config.max_epochs):
@@ -191,13 +191,13 @@ def train(config: AttributeHashmap):
             # These are the values evaluated with the data available so far.
             # `IS_std` is only meaningful if `EVALUATOR.IS_splits` > 1.
             if shall_plot:
-                IS_mean, IS_std, FID = EVALUATOR.fill_fake_img_batch(
+                IS_mean, IS_std, FID = evaluator.fill_fake_img_batch(
                     fake_batch=x_fake)
                 epoch_list.append(epoch_idx + batch_idx / len(train_loader))
                 IS_list.append(IS_mean)
                 FID_list.append(FID)
             else:
-                EVALUATOR.fill_fake_img_batch(fake_batch=x_fake,
+                evaluator.fill_fake_img_batch(fake_batch=x_fake,
                                               return_results=False)
 
             y_pred_real = discriminator(x_real).view(-1)
@@ -299,7 +299,7 @@ def train(config: AttributeHashmap):
         plt.close(fig=fig)
 
         # Need to clear up the fake images every epoch.
-        EVALUATOR.clear_fake_imgs()
+        evaluator.clear_fake_imgs()
     return
 
 
