@@ -11,7 +11,7 @@ Alex Wong (alex.wong@yale.edu)
     - supports on-the-fly evaluation during training.
 2. We provided a simple demo script to demonstrate one common use case.
 
-## Demo Script: Use [DCGAN](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial) to generate [SVHN](http://ufldl.stanford.edu/housenumbers/) numbers.
+## Demo Script: Use [DCGAN](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial) to generate [SVHN](http://ufldl.stanford.edu/housenumbers/) numbers
 
 The script can be found in [`src/train_dcgan_svhn.py`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/train_dcgan_svhn.py)
 
@@ -21,7 +21,7 @@ The script can be found in [`src/train_dcgan_svhn.py`](https://github.com/ChenLi
 2. IS and FID curves.
 <img src = "debug_plot/dcgan_svhn/IS_FID_curve.png" width=800>
 
-## The Evaluator for IS and FID.
+## The Evaluator for IS and FID
 <details>
   <summary><b>Introduction to the Evaluator</b></summary>
 <br>
@@ -64,7 +64,7 @@ COMMON USE CASES
 
 </details>
 
-## Repository Hierarchy.
+## Repository Hierarchy
 ```
 GAN-IS-FID-evaluator
     ├── config
