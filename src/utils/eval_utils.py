@@ -43,7 +43,7 @@ class GAN_Evaluator(object):
     *So please make sure you load real images before the fake images.*
 
     ---------
-    COMMON USE CASES
+    Common Use Cases:
     1. For the purpose of on-the-fly evaluation during GAN training:
         We recommend pre-loading the real images using the dataloader format, and
         populate the fake images using the per-batch format as training goes on.
@@ -52,7 +52,6 @@ class GAN_Evaluator(object):
         - In *unusual* cases where your real images change (such as in progressive growing GANs),
         you may want to clear the real images. You can do so via:
             `clear_real_imgs`
-
     2. For the purpose of offline evaluation of a saved dataset:
         We recommend pre-loading the real images and fake images.
 

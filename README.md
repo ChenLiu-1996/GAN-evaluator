@@ -47,7 +47,14 @@ The real and fake images can be provided to this evaluator in either of the foll
     `fill_real_img_batch`
     `fill_fake_img_batch`
 
-COMMON USE CASES
+!!! Please note: the current IS and FID will be returned upon completion of either of the following:
+    `load_all_fake_imgs`
+    `fill_fake_img_batch`
+Return format:
+    (IS mean, IS std, FID)
+*So please make sure you load real images before the fake images.*
+
+Common Use Cases:
 1. For the purpose of on-the-fly evaluation during GAN training:
     We recommend pre-loading the real images using the dataloader format, and
     populate the fake images using the per-batch format as training goes on.
@@ -56,7 +63,6 @@ COMMON USE CASES
     - In *unusual* cases where your real images change (such as in progressive growing GANs),
     you may want to clear the real images. You can do so via:
         `clear_real_imgs`
-
 2. For the purpose of offline evaluation of a saved dataset:
     We recommend pre-loading the real images and fake images.
 ```
