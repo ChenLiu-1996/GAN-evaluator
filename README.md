@@ -75,7 +75,7 @@ GAN-IS-FID-evaluator
         |   └── other utility files.
         └── `train_dcgan_svhn.py`: our example use case.
 ```
-Folders marked with (*), if not exist, will be created automatically when you run (`train_dcgan_svhn.py`)[https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/train_dcgan_svhn.py].
+Folders marked with (*), if not exist, will be created automatically when you run [`train_dcgan_svhn.py`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/train_dcgan_svhn.py).
 
 ### Usage
 To run our example use case, do the following after activating the proper environment.
