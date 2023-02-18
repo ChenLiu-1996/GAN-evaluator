@@ -59,7 +59,7 @@ class GAN_Evaluator(object):
     Partially inspired by:
     https://github.com/sbarratt/inception-score-pytorch/blob/master/inception_score.py
     https://www.kaggle.com/code/ibtesama/gan-in-pytorch-with-fid
-    https://github.com/mseitzer/pytorch-fid/blob/0a754fb8e66021700478fd365b79c2eaa316e31b/src/pytorch_fid/fid_score.py
+    https://github.com/mseitzer/pytorch-fid/blob/master/src/pytorch_fid/fid_score.py
     """
 
     def __init__(self,
