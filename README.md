@@ -1,8 +1,6 @@
 # GAN Evaluator for Inception Score (IS) and Frechet Inception Distance (FID)
 
-Chen Liu (chen.liu.cl2482@yale.edu)
-
-Alex Wong (alex.wong@yale.edu)
+Chen Liu (chen.liu.cl2482@yale.edu), Alex Wong (alex.wong@yale.edu)
 
 ## Main Contributions
 1. We created a GAN evaluator for IS and FID that
