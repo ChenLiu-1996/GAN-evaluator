@@ -4,7 +4,7 @@
 [![PyPI license](https://img.shields.io/pypi/l/gan-evaluator.svg)](https://pypi.python.org/pypi/ansicolortags/)
 [![PyPI download month](https://img.shields.io/pypi/dm/gan-evaluator.svg)](https://pypi.python.org/pypi/ansicolortags/)
 [![PyPI download day](https://img.shields.io/pypi/dd/gan-evaluator.svg)](https://pypi.python.org/pypi/ansicolortags/)
-[made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
 Chen Liu (chen.liu.cl2482@yale.edu), Alex Wong (alex.wong@yale.edu)
 
