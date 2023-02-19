@@ -64,7 +64,7 @@ The script can be found in [`src/train_dcgan_svhn.py`](https://github.com/ChenLi
     <img src = "https://github.com/ChenLiu-1996/GAN-evaluator/blob/main/debug_plot/dcgan_svhn/epoch_0046_batch_0199_generated.png" width=800>
 
     - IS and FID curves.
-    <img src = "https://github.com/ChenLiu-1996/GAN-evaluator/blob/main/debug_plot/dcgan_svhn/epoch_0046_batch_0199_generated.png" width=800>
+    <img src = "https://github.com/ChenLiu-1996/GAN-evaluator/blob/main/debug_plot/dcgan_svhn/IS_FID_curve.png" width=800>
 
 ## Details: The Evaluator for IS and FID
 <details>
