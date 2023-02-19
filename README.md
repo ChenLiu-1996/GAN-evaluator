@@ -4,7 +4,7 @@
 
 Chen Liu (chen.liu.cl2482@yale.edu), Alex Wong (alex.wong@yale.edu)
 
-*Please kindly :star2:[![Github Stars](https://img.shields.io/github/stars/ChenLiu-1996/GAN-IS-FID-evaluator.svg?style=social&label=Stars)](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/):star2: this repo for better reach if you find it useful. Let's help out the community!*
+*Please kindly **Star** [![Github Stars](https://img.shields.io/github/stars/ChenLiu-1996/GAN-IS-FID-evaluator.svg?style=social&label=Stars)](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/) this repo for better reach if you find it useful. Let's help out the community!*
 
 ## NEWS
 ### [Feb 18, 2023]
@@ -61,10 +61,10 @@ The script can be found in [`src/train_dcgan_svhn.py`](https://github.com/ChenLi
 
 - Some visualizations of the demo script:
     - Real (top) and Generated (bottom) images.
-    <img src = "debug_plot/dcgan_svhn/epoch_0046_batch_0199_generated.png" width=800>
+    <img src = "https://github.com/ChenLiu-1996/GAN-evaluator/blob/main/debug_plot/dcgan_svhn/epoch_0046_batch_0199_generated.png" width=800>
 
     - IS and FID curves.
-    <img src = "debug_plot/dcgan_svhn/IS_FID_curve.png" width=800>
+    <img src = "https://github.com/ChenLiu-1996/GAN-evaluator/blob/main/debug_plot/dcgan_svhn/epoch_0046_batch_0199_generated.png" width=800>
 
 ## Details: The Evaluator for IS and FID
 <details>
