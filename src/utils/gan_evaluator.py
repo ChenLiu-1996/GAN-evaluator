@@ -107,7 +107,7 @@ class GAN_Evaluator(object):
     def fill_real_img_batch(self, real_batch: torch.Tensor) -> None:
         batch_size = real_batch.shape[0]
         real_batch = normalize(real_batch)
-        real_batch = real_batch.to(self.device)
+        real_batch = real_batch.type(torch.FloatTensor).to(self.device)
 
         _, _, H, W = real_batch.shape
         if H < self.min_resolution or W < self.min_resolution:
@@ -127,7 +127,7 @@ class GAN_Evaluator(object):
             return_results: bool = True) -> Union[None, Tuple[float]]:
         batch_size = fake_batch.shape[0]
         fake_batch = normalize(fake_batch)
-        fake_batch = fake_batch.to(self.device)
+        fake_batch = fake_batch.type(torch.FloatTensor).to(self.device)
 
         _, _, H, W = fake_batch.shape
         if H < self.min_resolution or W < self.min_resolution:

@@ -5,7 +5,7 @@ with open('README.md') as f:
 
 setup(
     name='gan-evaluator',
-    version='1.13',
+    version='1.14',
     license='MIT',
     author='Chen Liu',
     author_email='chen.liu.cl2482@yale.edu',
