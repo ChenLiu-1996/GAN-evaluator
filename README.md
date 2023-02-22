@@ -8,7 +8,7 @@
 
 Chen Liu (chen.liu.cl2482@yale.edu), Alex Wong (alex.wong@yale.edu)
 
-*Please kindly **Star** [![Github Stars](https://img.shields.io/github/stars/ChenLiu-1996/GAN-IS-FID-evaluator.svg?style=social&label=Stars)](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/) this repo for better reach if you find it useful. Let's help out the community!*
+*Please kindly **Star** [![Github Stars](https://img.shields.io/github/stars/ChenLiu-1996/GAN-evaluator.svg?style=social&label=Stars)](https://github.com/ChenLiu-1996/GAN-evaluator/) this repo for better reach if you find it useful. Let's help out the community!*
 
 ## Main Contributions
 1. We created a GAN evaluator for IS and FID that
@@ -34,7 +34,7 @@ NOTE 2: During `pip install gan-evaluator`, the dependencies of `GAN_Evaluator` 
 
 ## Demo Script: Use [DCGAN](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial) to generate [SVHN](http://ufldl.stanford.edu/housenumbers/) digits
 
-The script can be found in [`src/train_dcgan_svhn.py`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/train_dcgan_svhn.py)
+The script can be found in [`src/train_dcgan_svhn.py`](https://github.com/ChenLiu-1996/GAN-evaluator/blob/main/src/train_dcgan_svhn.py)
 
 - Usage from the demo script, to give you a taste.
 
@@ -75,7 +75,7 @@ The script can be found in [`src/train_dcgan_svhn.py`](https://github.com/ChenLi
   <summary><b>Introduction to the Evaluator</b></summary>
 <br>
 
-More details can be found in [`src/utils/gan_evaluator.py/GAN_Evaluator`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/gan_evaluator.py#L13).
+More details can be found in [`src/utils/gan_evaluator.py/GAN_Evaluator`](https://github.com/ChenLiu-1996/GAN-evaluator/blob/main/src/utils/gan_evaluator.py#L13).
 
 ```
 This evaluator computes the following metrics:
@@ -121,7 +121,7 @@ Common Use Cases:
 
 ## Repository Hierarchy
 ```
-GAN-IS-FID-evaluator
+GAN-evaluator
     ├── config
     |   └── `dcgan_svhn.yaml`
     ├── data (*)
@@ -133,16 +133,16 @@ GAN-IS-FID-evaluator
         |   └── other utility files.
         └── `train_dcgan_svhn.py`: our demo script.
 ```
-Folders marked with (*), if not exist, will be created automatically when you run [`train_dcgan_svhn.py`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/train_dcgan_svhn.py).
+Folders marked with (*), if not exist, will be created automatically when you run [`train_dcgan_svhn.py`](https://github.com/ChenLiu-1996/GAN-evaluator/blob/main/src/train_dcgan_svhn.py).
 
 ## Usage
 - To run our demo script, do the following after activating the proper environment.
 ```
-git clone git@github.com:ChenLiu-1996/GAN-IS-FID-evaluator.git
+git clone git@github.com:ChenLiu-1996/GAN-evaluator.git
 cd src
 python train_dcgan_svhn.py --config ../config/dcgan_svhn.yaml
 ```
-- To integrate our evaluator into your existing project, you can simply copy [`src/utils/gan_evaluator.py`](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/blob/main/src/utils/gan_evaluator.py) to an appropriate folder in your project, and import `GAN_Evaluator` to wherever you find necessary. [**Update: Now you can directly install via pip!**](#feb-18-2023)
+- To integrate our evaluator into your existing project, you can simply copy [`src/utils/gan_evaluator.py`](https://github.com/ChenLiu-1996/GAN-evaluator/blob/main/src/utils/gan_evaluator.py) to an appropriate folder in your project, and import `GAN_Evaluator` to wherever you find necessary. [**Update: Now you can directly install via pip!**](#feb-18-2023)
 
 - We will add our citation bibtex, and we would appreciate if you reference our work in case this repository helps you in your research.
 
