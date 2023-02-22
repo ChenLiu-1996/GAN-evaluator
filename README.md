@@ -10,6 +10,13 @@ Chen Liu (chen.liu.cl2482@yale.edu), Alex Wong (alex.wong@yale.edu)
 
 *Please kindly **Star** [![Github Stars](https://img.shields.io/github/stars/ChenLiu-1996/GAN-IS-FID-evaluator.svg?style=social&label=Stars)](https://github.com/ChenLiu-1996/GAN-IS-FID-evaluator/) this repo for better reach if you find it useful. Let's help out the community!*
 
+## Main Contributions
+1. We created a GAN evaluator for IS and FID that
+    - [is easy to use](#usage),
+    - accepts data as either dataloaders or individual batches, and
+    - supports on-the-fly evaluation during training.
+2. We provided a simple demo script to demonstrate one common use case.
+
 ## NEWS
 ### [Feb 18, 2023]
 
@@ -24,13 +31,6 @@ from gan_evaluator import GAN_Evaluator
 NOTE 1: **You no longer need to copy any code from this repo in order to use `GAN_Evalutor`**! At this point, the primary purpose of this repo is description and demonstration. With that said, you surely can clone this repo and try out the demo script. Also, you may find it easier to copy and modify the code if you want slightly different behaviors.
 
 NOTE 2: During `pip install gan-evaluator`, the dependencies of `GAN_Evaluator` (but not of the demo script) are also installed.
-
-## Main Contributions
-1. We created a GAN evaluator for IS and FID that
-    - [is easy to use](#usage),
-    - accepts data as either dataloaders or individual batches, and
-    - supports on-the-fly evaluation during training.
-2. We provided a simple demo script to demonstrate one common use case.
 
 ## Demo Script: Use [DCGAN](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial) to generate [SVHN](http://ufldl.stanford.edu/housenumbers/) digits
 
