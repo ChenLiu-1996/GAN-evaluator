@@ -7,6 +7,7 @@
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
 Chen Liu (chen.liu.cl2482@yale.edu), Alex Wong (alex.wong@yale.edu)
+
 Chen's PhD Advisor: Smita Krishnaswamy (smita.krishnaswamy@yale.edu)
 
 *Please kindly **Star** [![Github Stars](https://img.shields.io/github/stars/ChenLiu-1996/GAN-evaluator.svg?style=social&label=Stars)](https://github.com/ChenLiu-1996/GAN-evaluator/) this repo for better reach if you find it useful. Let's help out the community!*
