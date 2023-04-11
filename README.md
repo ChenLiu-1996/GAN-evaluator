@@ -138,7 +138,7 @@ Folders marked with (*), if not exist, will be created automatically when you ru
 ## Usage
 - To integrate our evaluator into your existing project, you can simply [**install via pip!**](#feb-18-2023)
 
-- You can refer to the [Demo Script](demo-script) to see how to interface with the evaluator. Briefly, you need to declare the evaluator, feed in the real images, and feed in the fake images. In most cases, you would feed in the real images in one pass, whereas feed in the fake image on-the-fly as the model is trained and fake images are generated. Each time you feed in the fake images, you can choose whether or not to compute the metrics. Lastly, don't forget to remove the fake images at the end of each epoch.
+- You can refer to the demo script to see how to interface with the evaluator. Briefly, you need to declare the evaluator, feed in the real images, and feed in the fake images. In most cases, you would feed in the real images in one pass, whereas feed in the fake image on-the-fly as the model is trained and fake images are generated. Each time you feed in the fake images, you can choose whether or not to compute the metrics. Lastly, don't forget to remove the fake images at the end of each epoch.
 
 - To run our demo script, do the following after activating the proper environment.
 ```
