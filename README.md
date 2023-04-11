@@ -36,7 +36,7 @@ NOTE 2: During `pip install gan-evaluator`, the dependencies of `GAN_Evaluator` 
 
 The script can be found in [`src/train_dcgan_svhn.py`](https://github.com/ChenLiu-1996/GAN-evaluator/blob/main/src/train_dcgan_svhn.py)
 
-- Usage from the demo script, to give you a taste.
+- **Usage from the demo script, to give you a taste.**
 
     **Declaration**
     ```
@@ -136,15 +136,14 @@ GAN-evaluator
 Folders marked with (*), if not exist, will be created automatically when you run [`train_dcgan_svhn.py`](https://github.com/ChenLiu-1996/GAN-evaluator/blob/main/src/train_dcgan_svhn.py).
 
 ## Usage
+- To integrate our evaluator into your existing project, you can simply [**install via pip!**](#feb-18-2023)
+
 - To run our demo script, do the following after activating the proper environment.
 ```
 git clone git@github.com:ChenLiu-1996/GAN-evaluator.git
 cd src
 python train_dcgan_svhn.py --config ../config/dcgan_svhn.yaml
 ```
-- To integrate our evaluator into your existing project, you can simply copy [`src/utils/gan_evaluator.py`](https://github.com/ChenLiu-1996/GAN-evaluator/blob/main/src/utils/gan_evaluator.py) to an appropriate folder in your project, and import `GAN_Evaluator` to wherever you find necessary. [**Update: Now you can directly install via pip!**](#feb-18-2023)
-
-- We will add our citation bibtex, and we would appreciate if you reference our work in case this repository helps you in your research.
 
 ## Citation
 To be added.
